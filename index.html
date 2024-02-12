@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('blog.jpg'); /* Replace 'https://example.com/background-image.jpg' with your actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            color: rebeccapurple;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        article h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="toggleContent('homeContent')">Home</a></li>
+                <li><a href="#" onclick="toggleContent('aboutContent')">About</a></li>
+                <li><a href="#" onclick="toggleContent('contactContent')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="homeContent" class="content">
+            <article>
+                <h2>Welcome to My Blog</h2>
+                <p>Collaborating with friends can be rewarding, but it requires clear communication and mutual respect.
+                     Set clear goals and expectations, communicate openly, and play to each other's strengths.
+                      Respect personal boundaries, practice patience, and celebrate achievements together. Maintain professionalism, 
+                      foster a positive environment, and learn from mistakes. Stay committed and have fun along the way.
+                       By following these tips, you can navigate the challenges of collaboration with friends and achieve your goals 
+                        </p>
+            </article>
+        </div>
+        <div id="aboutContent" class="content">
+            <article>
+                <h2>About Us</h2>
+                <p>  I am VANKOUDTH ANVESH I belong to a middle-class family, my father is a farmer, and my mother is a housewife.
+                     I have learned punctuality and discipline are the two wheels that drive our life on a positive path.
+                      My mother is my role model.</p>
+            </article>
+        </div>
+        <div id="contactContent" class="content">
+            <article>
+                <h2>Contact Us</h2>
+                <p>Name: ANVESH</p>
+                <p>Email: anvesh27082002@gmail.com</p>
+                <p>Mobile Number: 9392435080</p>
+            </article>
+        </div>
+    </main>
+    
+
+    <script>
+        function toggleContent(contentId) {
+            var content = document.getElementById(contentId);
+            var allContent = document.getElementsByClassName("content");
+            for (var i = 0; i < allContent.length; i++) {
+                allContent[i].style.display = "none";
+            }
+            content.style.display = "block";
+        }
+    </script>
+</body>
+</html>
